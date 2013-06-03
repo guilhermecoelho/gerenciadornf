@@ -1,0 +1,9 @@
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\bin\Debug\BLL.dll
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\bin\Debug\BLL.pdb
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\bin\Debug\DAL.dll
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\bin\Debug\TO.dll
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\bin\Debug\DAL.pdb
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\bin\Debug\TO.pdb
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\obj\Debug\BLL.dll
+C:\projetos\gerenciadornf_new\gerenciadornf\BLL\obj\Debug\BLL.pdb

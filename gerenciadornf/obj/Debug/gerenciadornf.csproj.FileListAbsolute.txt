@@ -1,0 +1,4 @@
+C:\projetos\gerenciadornf_new\gerenciadornf\gerenciadornf\bin\gerenciadornf.dll
+C:\projetos\gerenciadornf_new\gerenciadornf\gerenciadornf\bin\gerenciadornf.pdb
+C:\projetos\gerenciadornf_new\gerenciadornf\gerenciadornf\obj\Debug\gerenciadornf.dll
+C:\projetos\gerenciadornf_new\gerenciadornf\gerenciadornf\obj\Debug\gerenciadornf.pdb
