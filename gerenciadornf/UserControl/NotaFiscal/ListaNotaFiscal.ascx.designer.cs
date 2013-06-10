@@ -85,6 +85,15 @@ namespace gerenciadornf.UserControl.NotaFiscal {
         protected global::System.Web.UI.WebControls.Button btnNovo;
         
         /// <summary>
+        /// btnInserirProduto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnInserirProduto;
+        
+        /// <summary>
         /// gvwNotaFiscal control.
         /// </summary>
         /// <remarks>
@@ -164,5 +173,23 @@ namespace gerenciadornf.UserControl.NotaFiscal {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnImprimir;
+        
+        /// <summary>
+        /// vwListaProdutos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vwListaProdutos;
+        
+        /// <summary>
+        /// ListaNotaFiscalProduto1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::gerenciadornf.UserControl.NotaFiscal.Produtos.ListaNotaFiscalProduto ListaNotaFiscalProduto1;
     }
 }

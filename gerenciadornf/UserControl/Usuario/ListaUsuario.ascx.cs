@@ -19,6 +19,7 @@ namespace gerenciadornf.UserControl.Usuario
         {
             mvwUsuario.ActiveViewIndex = 0;
             LoadGrid();
+            
         }
 
         protected void LoadGrid()

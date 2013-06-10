@@ -13,12 +13,21 @@ namespace gerenciadornf.UserControl.Menu {
     public partial class Menu {
         
         /// <summary>
-        /// NavigationMenu control.
+        /// nmAdministrador control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu NavigationMenu;
+        protected global::System.Web.UI.WebControls.Menu nmAdministrador;
+        
+        /// <summary>
+        /// nmFaturista control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu nmFaturista;
     }
 }

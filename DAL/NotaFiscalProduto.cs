@@ -131,11 +131,14 @@ namespace NotaFiscalProduto
             try
             {
 
+                StringBuilder strSql = new StringBuilder();
+                //string strSql = "SELECT NotaFiscalProduto.* FROM NotaFiscalProduto WHERE NotaFiscalProduto.idNotaFiscalProduto = @idNotaFiscalProduto";
 
-                string strSql = "SELECT NotaFiscalProduto.* FROM NotaFiscalProduto WHERE NotaFiscalProduto.idNotaFiscalProduto = @idNotaFiscalProduto";
+                strSql.Append(" SELECT notafiscalproduto.*, PRODUTO.descricao,PRODUTO.valorunitario  FROM notafiscalproduto ");
+                strSql.Append(" INNER JOIN PRODUTO ON PRODUTO.IDPRODUTO = notafiscalproduto.idproduto ");
 
                 cmd = connection.CreateCommand();
-                cmd.CommandText = strSql;
+                cmd.CommandText = strSql.ToString();
                 cmd.Parameters.AddWithValue("@idNotaFiscalProduto", ID);
                 cmd.ExecuteNonQuery();
 
@@ -147,8 +150,10 @@ namespace NotaFiscalProduto
                     clsNotaFiscalProduto.IDProduto = Convert.ToInt32(adap["IDProduto"]);
                     clsNotaFiscalProduto.QtdProduto = Convert.ToInt32(adap["QtdProduto"]);
                     clsNotaFiscalProduto.ValorTotal = Convert.ToDouble(adap["ValorTotal"]);
-                    clsNotaFiscalProduto.ValorTotal = Convert.ToDouble(adap["icsm"]);
-                    clsNotaFiscalProduto.ValorTotal = Convert.ToDouble(adap["ipi"]);
+                    clsNotaFiscalProduto.Icms = Convert.ToDouble(adap["icsm"]);
+                    clsNotaFiscalProduto.Ipi = Convert.ToDouble(adap["ipi"]);
+                    clsNotaFiscalProduto.NomeProduto = adap["descricao"].ToString();
+                    clsNotaFiscalProduto.ValorUnitario = Convert.ToDouble(adap["valorunitario"]);
                 }
 
                 return clsNotaFiscalProduto;

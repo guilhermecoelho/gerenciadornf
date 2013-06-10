@@ -133,11 +133,16 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos
         protected void btnIncluirProduto_Click(object sender, EventArgs e)
         {
             NotaFiscalProdutoTO clsNotaFiscalProduto = new NotaFiscalProdutoTO();
+            ProdutoTO clsProduto = new ProdutoTO();
+
             clsNotaFiscalProduto.IDNotaFiscal = this.idNotaFiscal;
             int idProduto = 0;
             int.TryParse(ddlProdutos.SelectedValue, out idProduto);
             clsNotaFiscalProduto.IDProduto = idProduto;
 
+            clsProduto = ProdutoBLL.GetProdutoByID(idProduto);
+            clsNotaFiscalProduto.ValorUnitario = clsProduto.ValorUnitario;
+            
             clsNotaFiscalProduto.QtdProduto = Convert.ToInt32(txtQuantidade.Text); 
             clsNotaFiscalProduto.Icms = Convert.ToDouble(txtICMS.Text);
             clsNotaFiscalProduto.Ipi = Convert.ToDouble(txtIPI.Text);
@@ -145,8 +150,6 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos
             NotaFiscalProdutoBLL.insert(clsNotaFiscalProduto);
 
             LoadGridNotaFiscalProduto();
-
-            
         }
     }
 }

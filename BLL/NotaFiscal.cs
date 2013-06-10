@@ -21,6 +21,11 @@ namespace NotaFiscal
         {
             return NotaFiscalDAL.GetNotaFiscalByID(ID);
         }
+
+        public static List<NotaFiscalTO> GetNotaFiscalBusca(String strNumeroNota, int intIDEmitente, int intIDCliente)
+        {
+            return NotaFiscalDAL.GetNotaFiscalBusca( strNumeroNota,  intIDEmitente,  intIDCliente);
+        }
         public static void insert(NotaFiscalTO clsNotaFiscal)
         {
             NotaFiscalDAL.insert(clsNotaFiscal);

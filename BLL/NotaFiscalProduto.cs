@@ -25,6 +25,23 @@ namespace NotaFiscalProduto
 
         public static void insert(NotaFiscalProdutoTO clsNotaFiscalProduto)
         {
+            Double dblValorTotalSemImposto = 0;
+            Double dblValorIPI = 0;
+            Double dblValorICMS = 0;
+
+            dblValorTotalSemImposto = clsNotaFiscalProduto.ValorUnitario * clsNotaFiscalProduto.QtdProduto;
+
+            if (clsNotaFiscalProduto.Ipi != 0)
+            {
+                dblValorIPI = dblValorTotalSemImposto * (clsNotaFiscalProduto.Ipi / 100);
+            }
+            if (clsNotaFiscalProduto.Icms != 0)
+            {
+                dblValorICMS = dblValorTotalSemImposto * (clsNotaFiscalProduto.Icms / 100);
+            }
+
+            clsNotaFiscalProduto.ValorTotal = dblValorTotalSemImposto + dblValorIPI + dblValorICMS;
+
             NotaFiscalProdutoDAL.insert(clsNotaFiscalProduto);
         }
         public static Boolean Delete(NotaFiscalProdutoTO clsNotaFiscalProduto)
@@ -35,6 +52,6 @@ namespace NotaFiscalProduto
         {
             return NotaFiscalProdutoDAL.Update(clsNotaFiscalProduto);
         }
-        
+
     }
 }

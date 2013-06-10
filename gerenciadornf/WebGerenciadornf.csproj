@@ -57,6 +57,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Cliente\Default.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="NotaFiscal\Default.aspx" />
     <Content Include="NotaFiscal\impressao.aspx" />
     <Content Include="NotaFiscal\Produtos\Default.aspx" />
@@ -74,6 +75,7 @@
     <Content Include="Transportadora\Default.aspx" />
     <Content Include="UserControl\Cliente\CadastraCliente.ascx" />
     <Content Include="UserControl\Cliente\ListaCliente.ascx" />
+    <Content Include="UserControl\Login\Login.ascx" />
     <Content Include="UserControl\Menu\Menu.ascx" />
     <Content Include="UserControl\NotaFiscal\CadastraNotaFiscal.ascx" />
     <Content Include="UserControl\NotaFiscal\Impressao\notaFiscalImpressao.ascx" />
@@ -163,6 +165,13 @@
     </Compile>
     <Compile Include="Cliente\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="NotaFiscal\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -258,6 +267,13 @@
     </Compile>
     <Compile Include="UserControl\Cliente\ListaCliente.ascx.designer.cs">
       <DependentUpon>ListaCliente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Login\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\Login\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControl\Menu\Menu.ascx.cs">
       <DependentUpon>Menu.ascx</DependentUpon>

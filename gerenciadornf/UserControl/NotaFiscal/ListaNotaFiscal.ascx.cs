@@ -15,12 +15,17 @@ namespace gerenciadornf.UserControl.NotaFiscal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            populaEmitente();
-            populaCliente();
+            if (!IsPostBack)
+            {
+                populaEmitente();
+                populaCliente();
+            }
+
         }
         protected void btnMostrarTudo_Click(object sender, EventArgs e)
         {
             mvwNotaFiscal.ActiveViewIndex = 0;
+
             LoadGrid();
         }
 
@@ -75,21 +80,47 @@ namespace gerenciadornf.UserControl.NotaFiscal
 
         protected void populaEmitente()
         {
-            List<EmitenteTO> clsEmitentes = new List<EmitenteTO>(); 
+            List<EmitenteTO> clsEmitentes = new List<EmitenteTO>();
             clsEmitentes = EmitenteBLL.listaEmitenteAll();
             ddlEmitente.DataSource = clsEmitentes;
             ddlEmitente.DataTextField = "nome";// Visualização
             ddlEmitente.DataValueField = "idEmitente"; //Valor
             ddlEmitente.DataBind();
+            ddlEmitente.Items.Insert(0, new ListItem("Selecione", "0"));
+
         }
         protected void populaCliente()
         {
-            List<ClienteTO> clsClientes = new List<ClienteTO>(); 
+            List<ClienteTO> clsClientes = new List<ClienteTO>();
             clsClientes = ClienteBLL.listaClienteAll();
             ddlCliente.DataSource = clsClientes;
             ddlCliente.DataTextField = "NOME";// Visualização
             ddlCliente.DataValueField = "IDCLIENTE"; //Valor
             ddlCliente.DataBind();
+            ddlCliente.Items.Insert(0, new ListItem("Selecione", "0"));
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            String strNumeroNota = txtnumeroNF.Text;
+            Int32 intIDEmitente = 0;
+            Int32.TryParse(ddlEmitente.SelectedValue, out intIDEmitente);
+            Int32 intIDCliente = 0;
+            Int32.TryParse(ddlCliente.SelectedValue, out intIDCliente);
+            List<NotaFiscalTO> clsNotaFiscals = new List<NotaFiscalTO>();
+            clsNotaFiscals = NotaFiscalBLL.GetNotaFiscalBusca(strNumeroNota, intIDEmitente, intIDCliente);
+            LoadGridBusca(clsNotaFiscals);
+        }
+
+        protected void LoadGridBusca(List<NotaFiscalTO> clsNotaFiscals)
+        {
+            gvwNotaFiscal.DataSource = clsNotaFiscals;
+            gvwNotaFiscal.DataBind();
+        }
+
+        protected void btnInserirProduto_Click(object sender, EventArgs e)
+        {
+            mvwNotaFiscal.ActiveViewIndex = 3;
         }
     }
 }
