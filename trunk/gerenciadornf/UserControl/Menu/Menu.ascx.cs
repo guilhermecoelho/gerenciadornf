@@ -11,6 +11,26 @@ namespace gerenciadornf.UserControl.Menu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+          // String strIDTipoUsuario =  Session["tipoUsuario"].ToString();
+            String strIDTipoUsuario = "";
+
+            HttpCookie cookie = Request.Cookies["tipoUsuario"];
+            if (cookie != null)
+            {
+                strIDTipoUsuario = cookie.Value.ToString();
+            }
+            if (!String.IsNullOrEmpty(strIDTipoUsuario))
+            {
+
+                if (String.Equals(strIDTipoUsuario, "1"))
+                {
+                    nmAdministrador.Visible = true;
+                }
+                else if (String.Equals(strIDTipoUsuario, "2"))
+                {
+                   nmFaturista.Visible = true;
+                }
+            }
 
         }
     }

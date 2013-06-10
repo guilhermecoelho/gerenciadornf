@@ -104,6 +104,51 @@ namespace Usuario
                 }
             }
         }
+        public static UsuarioTO GetUsuarioByNomeAndPassword(String strLogin, String strPassword)
+        {
+
+            String myConnection = "Server=localhost;Database=gerenciadornf;Uid=root;Pwd=;";
+
+            MySqlConnection connection = new MySqlConnection(myConnection);
+            MySqlCommand cmd;
+            connection.Open();
+            try
+            {
+
+                UsuarioTO clsUsuario = new UsuarioTO();
+
+                string strSql = "SELECT Usuario.* FROM Usuario WHERE Usuario.login = @login AND Usuario.password = @password ";
+
+                cmd = connection.CreateCommand();
+                cmd.CommandText = strSql;
+                cmd.Parameters.AddWithValue("@login", strLogin);
+                cmd.Parameters.AddWithValue("@password", strPassword);
+                cmd.ExecuteNonQuery();
+
+                MySqlDataReader adap = cmd.ExecuteReader();
+                while (adap.Read())
+                {
+                    clsUsuario.ID = Convert.ToInt32(adap["idusuario"]);
+                    clsUsuario.Nome = adap["nome"].ToString();
+                    clsUsuario.Email = adap["login"].ToString();
+                    clsUsuario.Password = adap["password"].ToString();
+                    clsUsuario.IDTipoUsuario = Convert.ToInt32(adap["tipousuario"]);
+                }
+
+                return clsUsuario;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
         #endregion
         #region Persistence
         public static void insert(UsuarioTO clsUsuario)

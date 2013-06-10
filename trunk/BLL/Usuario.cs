@@ -19,6 +19,11 @@ namespace Usuario
         {
             return UsuarioDAL.GetUsuarioByID(ID);
         }
+
+        public static UsuarioTO GetUsuarioByNomeAndPassword(String strLogin, String strPassword)
+        {
+            return UsuarioDAL.GetUsuarioByNomeAndPassword(strLogin, strPassword);
+        }
         public static void insert(UsuarioTO clsUsuario)
         {
             UsuarioDAL.insert(clsUsuario);

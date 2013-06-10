@@ -3,6 +3,7 @@
 <%@ Register Src="CadastraNotaFiscal.ascx" TagName="CadastraNotaFiscal" TagPrefix="uc1" %>
 <%@ Register Src="Impressao/notaFiscalImpressao.ascx" TagName="notaFiscalImpressao"
     TagPrefix="uc2" %>
+    <%@ Register src="Produtos/ListaNotaFiscalProduto.ascx" tagname="ListaNotaFiscalProduto" tagprefix="uc3" %>
     <h2>
         Nota Fiscal
     </h2>
@@ -43,9 +44,12 @@
             </tr>
         </table>
         <br />
-        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+        <asp:Button ID="btnBuscar" runat="server" Text="Buscar" 
+            onclick="btnBuscar_Click" />
         <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
         <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
+        <asp:Button ID="btnInserirProduto" runat="server" 
+            onclick="btnInserirProduto_Click" Text="Editar Produtos das NF" />
         <br />
         <asp:GridView ID="gvwNotaFiscal" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvwNotaFiscal_RowDeleting"
             OnRowEditing="gvwNotaFiscal_RowEditing" DataKeyNames="IDnotafiscal" OnSelectedIndexChanging="gvwNotaFiscal_SelectedIndexChanged">
@@ -107,4 +111,8 @@
         <asp:Button ID="btnVoltarImpressao" runat="server" Text="Voltar" />
         <asp:Button ID="btnImprimir" runat="server" Text="Imprimir" />
     </asp:View>
+    <asp:View ID="vwListaProdutos" runat="server">
+        <uc3:ListaNotaFiscalProduto ID="ListaNotaFiscalProduto1" runat="server" />
+    </asp:View >
+    
 </asp:MultiView>

@@ -13,6 +13,5 @@ namespace gerenciadornf.Account
         {
             RegisterHyperLink.NavigateUrl = "Register.aspx?ReturnUrl=" + HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
         }
-
     }
 }

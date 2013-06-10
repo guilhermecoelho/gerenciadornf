@@ -44,6 +44,6 @@
     </asp:View>
     <asp:View ID="vwCadastraUsuario" runat="server">
         <uc1:CadastraUsuario ID="CadastraUsuario1" runat="server" />
-        <asp:Button ID="btnSalvar" runat="server" Text="Button" OnClick="btnSalvar_Click" />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" ValidationGroup="Cadastro"/>
     </asp:View>
 </asp:MultiView>
