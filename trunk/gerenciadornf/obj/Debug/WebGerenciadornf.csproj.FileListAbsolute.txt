@@ -20,3 +20,14 @@ C:\projetos\gerenciadornf\gerenciadornf\gerenciadornf\bin\DAL.pdb
 C:\projetos\gerenciadornf\gerenciadornf\gerenciadornf\obj\Debug\WebGerenciadornf.csprojResolveAssemblyReference.cache
 C:\projetos\gerenciadornf\gerenciadornf\gerenciadornf\obj\Debug\gerenciadornf.dll
 C:\projetos\gerenciadornf\gerenciadornf\gerenciadornf\obj\Debug\gerenciadornf.pdb
+C:\projetos\Nova pasta\gerenciadornf\bin\gerenciadornf.dll
+C:\projetos\Nova pasta\gerenciadornf\bin\gerenciadornf.pdb
+C:\projetos\Nova pasta\gerenciadornf\bin\BLL.dll
+C:\projetos\Nova pasta\gerenciadornf\bin\TO.dll
+C:\projetos\Nova pasta\gerenciadornf\bin\DAL.dll
+C:\projetos\Nova pasta\gerenciadornf\bin\BLL.pdb
+C:\projetos\Nova pasta\gerenciadornf\bin\TO.pdb
+C:\projetos\Nova pasta\gerenciadornf\bin\DAL.pdb
+C:\projetos\Nova pasta\gerenciadornf\obj\Debug\WebGerenciadornf.csprojResolveAssemblyReference.cache
+C:\projetos\Nova pasta\gerenciadornf\obj\Debug\gerenciadornf.dll
+C:\projetos\Nova pasta\gerenciadornf\obj\Debug\gerenciadornf.pdb

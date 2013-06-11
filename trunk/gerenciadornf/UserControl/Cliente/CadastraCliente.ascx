@@ -44,7 +44,7 @@
             Cep:
         </td>
         <td>
-            <asp:TextBox ID="txtCep" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="txtCep" class="cep" runat="server"></asp:TextBox><br />
         </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@
             UF:
         </td>
         <td>
-            <asp:TextBox ID="txtUf" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="txtUf" class="UF" runat="server"></asp:TextBox><br />
         </td>
     </tr>
     <tr>
@@ -92,7 +92,7 @@
             Telefone:
         </td>
         <td>
-            <asp:TextBox ID="txtTelefone" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="txtTelefone" class="telefone" runat="server"></asp:TextBox><br />
         </td>
     </tr>
     <tr>

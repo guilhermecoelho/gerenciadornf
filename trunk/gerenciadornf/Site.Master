@@ -6,6 +6,18 @@
 <head runat="server">
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/jquery-1.10.1.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery.mask.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery.mask.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".telefone").mask("(99)9999-9999");
+                $(".cep").mask("9999-999");
+                $(".data").mask("99/99/9999");
+                $(".UF").mask("AA");
+
+            });
+    </script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>

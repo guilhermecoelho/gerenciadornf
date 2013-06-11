@@ -85,6 +85,7 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos
         {
             if (!IsPostBack)
             {
+                txtQuantidade.Attributes.Add("onkeydown", "MascaraData(this)");
                 LoadGrid();
             }
         }
