@@ -34,17 +34,51 @@
         </asp:TemplateField>
     </Columns>
 </asp:GridView>
-Produto:
-<asp:DropDownList ID="ddlProdutos" runat="server" Visible="false">
-</asp:DropDownList>
+<asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Cadastro" />
+<table>
+    <tr>
+        <td>
+            Produto:
+        </td>
+        <td>
+            <asp:DropDownList ID="ddlProdutos" runat="server" Visible="false">
+            </asp:DropDownList>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Quantidade:
+            <asp:RequiredFieldValidator ID="rfvQuantidade" ControlToValidate="txtQuantidade"
+                ValidationGroup="Cadastro" runat="server" ErrorMessage="Informe o Nome" Display="Dynamic">*</asp:RequiredFieldValidator>
+        </td>
+        <td>
+            <asp:TextBox ID="txtQuantidade" runat="server" Visible="false" ></asp:TextBox><br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Aliquota ICMS:
+            <asp:RequiredFieldValidator ID="rfvIcms" ControlToValidate="txtICMS" ValidationGroup="Cadastro"
+                runat="server" ErrorMessage="Informe a aliquita de ICMS" Display="Dynamic">*</asp:RequiredFieldValidator>
+        </td>
+        <td>
+            <asp:TextBox ID="txtICMS" runat="server" Visible="false"></asp:TextBox><br />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Aliquota IPI:
+            <asp:RequiredFieldValidator ID="rfvIpi" ControlToValidate="txtIPI"
+                ValidationGroup="Cadastro" runat="server" ErrorMessage="Informe a aliquota de IPI" Display="Dynamic">*</asp:RequiredFieldValidator>
+        </td>
+        <td>
+            <asp:TextBox ID="txtIPI" runat="server" Visible="false" ></asp:TextBox><br />
+            
+        </td>
+    </tr>
+</table>
 <br />
-Quantidade:
-<asp:TextBox ID="txtQuantidade" runat="server" Visible="false"></asp:TextBox><br />
-Aliquota ICMS:
-<asp:TextBox ID="txtICMS" runat="server" Visible="false"></asp:TextBox><br />
-Aliquota IPI:
-<asp:TextBox ID="txtIPI" runat="server" Visible="false"></asp:TextBox><br />
-<asp:Button ID="btnIncluirProduto" runat="server" Text="Incluir Produto" OnClick="btnIncluirProduto_Click" />
+<asp:Button ID="btnIncluirProduto" runat="server" Text="Incluir Produto" OnClick="btnIncluirProduto_Click" ValidationGroup="Cadastro"/>
 <asp:GridView ID="gvwNotaFiscalProduto" AutoGenerateColumns="false" runat="server">
     <Columns>
         <asp:TemplateField HeaderText="Numero">

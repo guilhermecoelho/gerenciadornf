@@ -1,6 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListaCliente.ascx.cs"
     Inherits="gerenciadornf.UserControl.Cliente.ListaCliente" %>
 <%@ Register Src="CadastraCliente.ascx" TagName="CadastraCliente" TagPrefix="uc1" %>
+
 <asp:MultiView ID="mvwCliente" runat="server" ActiveViewIndex="0">
     <asp:View ID="vwListaCliente" runat="server">
         <asp:GridView ID="gvwCliente" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvwCliente_RowDeleting"

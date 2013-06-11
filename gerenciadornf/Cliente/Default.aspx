@@ -3,6 +3,8 @@
 
 <%@ Register Src="../UserControl/Cliente/ListaCliente.ascx" TagName="ListaCliente"
     TagPrefix="uc1" %>
+
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+
     <uc1:ListaCliente ID="ListaCliente1" runat="server" />
 </asp:Content>
