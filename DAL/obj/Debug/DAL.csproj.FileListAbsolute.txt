@@ -12,3 +12,10 @@ C:\projetos\gerenciadornf\gerenciadornf\DAL\bin\Debug\TO.pdb
 C:\projetos\gerenciadornf\gerenciadornf\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\projetos\gerenciadornf\gerenciadornf\DAL\obj\Debug\DAL.dll
 C:\projetos\gerenciadornf\gerenciadornf\DAL\obj\Debug\DAL.pdb
+C:\projetos\Nova pasta\DAL\bin\Debug\DAL.dll
+C:\projetos\Nova pasta\DAL\bin\Debug\DAL.pdb
+C:\projetos\Nova pasta\DAL\bin\Debug\TO.dll
+C:\projetos\Nova pasta\DAL\bin\Debug\TO.pdb
+C:\projetos\Nova pasta\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\projetos\Nova pasta\DAL\obj\Debug\DAL.dll
+C:\projetos\Nova pasta\DAL\obj\Debug\DAL.pdb

@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListaNotaFiscalProduto.ascx.cs"
     Inherits="gerenciadornf.UserControl.NotaFiscal.Produtos.ListaNotaFiscalProduto" %>
+Incluir Produto
 <asp:GridView ID="gvNotaFiscal" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanging="gvNotaFiscal_SelectedIndexChanging "
     DataKeyNames="idNotaFiscal">
     <Columns>
@@ -34,52 +35,57 @@
         </asp:TemplateField>
     </Columns>
 </asp:GridView>
-<asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Cadastro" />
-<table>
-    <tr>
-        <td>
-            Produto:
-        </td>
-        <td>
-            <asp:DropDownList ID="ddlProdutos" runat="server" Visible="false">
-            </asp:DropDownList>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Quantidade:
-            <asp:RequiredFieldValidator ID="rfvQuantidade" ControlToValidate="txtQuantidade"
-                ValidationGroup="Cadastro" runat="server" ErrorMessage="Informe o Nome" Display="Dynamic">*</asp:RequiredFieldValidator>
-        </td>
-        <td>
-            <asp:TextBox ID="txtQuantidade" runat="server" Visible="false" ></asp:TextBox><br />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Aliquota ICMS:
-            <asp:RequiredFieldValidator ID="rfvIcms" ControlToValidate="txtICMS" ValidationGroup="Cadastro"
-                runat="server" ErrorMessage="Informe a aliquita de ICMS" Display="Dynamic">*</asp:RequiredFieldValidator>
-        </td>
-        <td>
-            <asp:TextBox ID="txtICMS" runat="server" Visible="false"></asp:TextBox><br />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Aliquota IPI:
-            <asp:RequiredFieldValidator ID="rfvIpi" ControlToValidate="txtIPI"
-                ValidationGroup="Cadastro" runat="server" ErrorMessage="Informe a aliquota de IPI" Display="Dynamic">*</asp:RequiredFieldValidator>
-        </td>
-        <td>
-            <asp:TextBox ID="txtIPI" runat="server" Visible="false" ></asp:TextBox><br />
-            
-        </td>
-    </tr>
-</table>
+<form>
+<div id="divCadastro">
+    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Cadastro" />
+    <table>
+        <tr>
+            <td>
+                <asp:Label ID="lblProduto" Text="Produto" runat="server" Visible="false" />
+            </td>
+            <td>
+                <asp:DropDownList ID="ddlProdutos" runat="server" Visible="false">
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lblQuantidade" Text="Quantidade" runat="server" Visible="false" />
+                <asp:RequiredFieldValidator ID="rfvQuantidade" ControlToValidate="txtQuantidade"
+                    ValidationGroup="Cadastro" runat="server" ErrorMessage="Informe o Nome" Display="Dynamic">*</asp:RequiredFieldValidator>
+            </td>
+            <td>
+                <asp:TextBox ID="txtQuantidade" runat="server" Visible="false"></asp:TextBox><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lblIcms" Text="Aliquota ICMS" runat="server" Visible="false" />
+                <asp:RequiredFieldValidator ID="rfvIcms" ControlToValidate="txtICMS" ValidationGroup="Cadastro"
+                    runat="server" ErrorMessage="Informe a aliquita de ICMS" Display="Dynamic">*</asp:RequiredFieldValidator>
+            </td>
+            <td>
+                <asp:TextBox ID="txtICMS" runat="server" Visible="false"></asp:TextBox><br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="lblIpi" Text="Aliquota IPI" runat="server" Visible="false" />
+                <asp:RequiredFieldValidator ID="rfvIpi" ControlToValidate="txtIPI" ValidationGroup="Cadastro"
+                    runat="server" ErrorMessage="Informe a aliquota de IPI" Display="Dynamic">*</asp:RequiredFieldValidator>
+            </td>
+            <td>
+                <asp:TextBox ID="txtIPI" runat="server" Visible="false"></asp:TextBox><br />
+            </td>
+        </tr>
+    </table>
+    <asp:Button ID="btnIncluirProduto" runat="server" Text="Incluir Produto" OnClick="btnIncluirProduto_Click"
+        ValidationGroup="Cadastro" Visible="false" />
+</div>
+</form>
 <br />
-<asp:Button ID="btnIncluirProduto" runat="server" Text="Incluir Produto" OnClick="btnIncluirProduto_Click" ValidationGroup="Cadastro"/>
-<asp:GridView ID="gvwNotaFiscalProduto" AutoGenerateColumns="false" runat="server">
+<asp:GridView ID="gvwNotaFiscalProduto" AutoGenerateColumns="false" runat="server"
+    OnRowDeleting="gvwNotaFiscalProduto_RowDeleting" DataKeyNames="IDnotafiscalProduto">
     <Columns>
         <asp:TemplateField HeaderText="Numero">
             <ItemTemplate>
@@ -114,6 +120,14 @@
         <asp:TemplateField HeaderText="Valor Total">
             <ItemTemplate>
                 <%# Eval("ValorTotal")%>
+            </ItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField HeaderText="Excluir">
+            <ItemTemplate>
+                <div align="center">
+                    <asp:ImageButton ID="ImageButton3" runat="server" ToolTip="Incluir" CausesValidation="False"
+                        CommandName="Delete" ImageUrl="~/Util/Imagens/Icones/excluir.png" />
+                </div>
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>

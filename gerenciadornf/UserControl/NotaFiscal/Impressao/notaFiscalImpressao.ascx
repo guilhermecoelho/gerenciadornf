@@ -15,15 +15,14 @@
                                 </td>
                                 <td align="left" width="10%">
                                     Versão<br />
-                                    Numero Versão
+                                    1
                                 </td>
                                 <td align="left" width="10%">
                                     Data Emissão<br />
                                     <asp:Literal ID="lblDataEmissao" runat="server"></asp:Literal>
                                 </td>
                                 <td align="left" width="10%">
-                                    Pedido<br />
-                                    numero Pedido
+
                                 </td>
                             </tr>
                         </tbody>

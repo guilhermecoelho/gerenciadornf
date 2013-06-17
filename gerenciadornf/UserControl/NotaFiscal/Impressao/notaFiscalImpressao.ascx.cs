@@ -79,10 +79,20 @@ namespace gerenciadornf.UserControl.NotaFiscal.Impressao
             lblUFCliente.Text = clsCliente.Uf;
             lblTelefoneCliente.Text = clsCliente.Telefone;
 
-            lblBaseCalculoICMS.Text = "0";
-            lblTotalICMS.Text = "0";
-            lblValorTotalIPI.Text = "0";
-            lblValorTotalProduto.Text = "0";
+            Double dblTotalSemImpostos = 0;
+            Double dblTotalFinal = 0;
+            double dblTotalImpostos = 0;
+            foreach (NotaFiscalProdutoTO _clsNotaFiscalProduto in clsNotaFiscalProduto)
+            {
+                dblTotalSemImpostos += (_clsNotaFiscalProduto.ValorUnitario * _clsNotaFiscalProduto.QtdProduto);
+                dblTotalImpostos += _clsNotaFiscalProduto.ValorTotal;
+            }
+            dblTotalFinal = dblTotalImpostos + dblTotalSemImpostos;
+
+            lblBaseCalculoICMS.Text = dblTotalSemImpostos.ToString();
+            lblTotalICMS.Text = dblTotalImpostos.ToString();
+           // lblValorTotalIPI.Text = "0";
+            lblValorTotalProduto.Text = dblTotalFinal.ToString();
 
             gvNotaFiscalProduto.DataSource = this.clsNotaFiscalProduto;
             gvNotaFiscalProduto.DataBind();

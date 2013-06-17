@@ -150,7 +150,7 @@ namespace NotaFiscalProduto
                     clsNotaFiscalProduto.IDProduto = Convert.ToInt32(adap["IDProduto"]);
                     clsNotaFiscalProduto.QtdProduto = Convert.ToInt32(adap["QtdProduto"]);
                     clsNotaFiscalProduto.ValorTotal = Convert.ToDouble(adap["ValorTotal"]);
-                    clsNotaFiscalProduto.Icms = Convert.ToDouble(adap["icsm"]);
+                    clsNotaFiscalProduto.Icms = Convert.ToDouble(adap["icms"]);
                     clsNotaFiscalProduto.Ipi = Convert.ToDouble(adap["ipi"]);
                     clsNotaFiscalProduto.NomeProduto = adap["descricao"].ToString();
                     clsNotaFiscalProduto.ValorUnitario = Convert.ToDouble(adap["valorunitario"]);

@@ -3,3 +3,8 @@ C:\projetos\gerenciadornf_new\gerenciadornf\TO\bin\Debug\TO.pdb
 C:\projetos\gerenciadornf_new\gerenciadornf\TO\obj\Debug\TO.dll
 C:\projetos\gerenciadornf_new\gerenciadornf\TO\obj\Debug\TO.pdb
 C:\projetos\gerenciadornf_new\gerenciadornf\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
+C:\projetos\Nova pasta\TO\bin\Debug\TO.dll
+C:\projetos\Nova pasta\TO\bin\Debug\TO.pdb
+C:\projetos\Nova pasta\TO\obj\Debug\TO.csprojResolveAssemblyReference.cache
+C:\projetos\Nova pasta\TO\obj\Debug\TO.dll
+C:\projetos\Nova pasta\TO\obj\Debug\TO.pdb
