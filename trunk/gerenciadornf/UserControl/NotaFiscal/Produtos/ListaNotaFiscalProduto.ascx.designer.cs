@@ -31,6 +31,15 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos {
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
         
         /// <summary>
+        /// lblProduto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProduto;
+        
+        /// <summary>
         /// ddlProdutos control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlProdutos;
+        
+        /// <summary>
+        /// lblQuantidade control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQuantidade;
         
         /// <summary>
         /// rfvQuantidade control.
@@ -58,6 +76,15 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos {
         protected global::System.Web.UI.WebControls.TextBox txtQuantidade;
         
         /// <summary>
+        /// lblIcms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIcms;
+        
+        /// <summary>
         /// rfvIcms control.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtICMS;
+        
+        /// <summary>
+        /// lblIpi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIpi;
         
         /// <summary>
         /// rfvIpi control.

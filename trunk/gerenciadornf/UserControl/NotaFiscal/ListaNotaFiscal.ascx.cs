@@ -47,8 +47,6 @@ namespace gerenciadornf.UserControl.NotaFiscal
             clsNotaFiscal = NotaFiscalBLL.GetNotaFiscalByID(ID);
             NotaFiscalBLL.Delete(clsNotaFiscal);
             LoadGrid();
-
-
         }
         protected void gvwNotaFiscal_RowEditing(object sender, GridViewEditEventArgs e)
         {

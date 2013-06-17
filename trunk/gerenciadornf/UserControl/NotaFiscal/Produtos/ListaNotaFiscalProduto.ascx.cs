@@ -85,7 +85,6 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos
         {
             if (!IsPostBack)
             {
-                txtQuantidade.Attributes.Add("onkeydown", "MascaraData(this)");
                 LoadGrid();
             }
         }
@@ -115,6 +114,12 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos
                 txtICMS.Visible = true;
                 txtIPI.Visible = true;
                 txtQuantidade.Visible = true;
+
+                lblIcms.Visible = true;
+                lblIpi.Visible = true;
+                lblProduto.Visible = true;
+                lblQuantidade.Visible = true;
+                btnIncluirProduto.Visible = true;
 
                 List<ProdutoTO> clsProdutos = new List<ProdutoTO>();
                 clsProdutos = ProdutoBLL.listaProdutoAll();
@@ -150,7 +155,23 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos
 
             NotaFiscalProdutoBLL.insert(clsNotaFiscalProduto);
 
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('produto incluido com sucesso')", true);
+
             LoadGridNotaFiscalProduto();
+        }
+
+        protected void gvwNotaFiscalProduto_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            NotaFiscalProdutoTO clsNotaFiscalProduto = new NotaFiscalProdutoTO();
+            Int32 ID = (Int32)gvwNotaFiscalProduto.DataKeys[e.RowIndex].Value;
+            clsNotaFiscalProduto = NotaFiscalProdutoBLL.GetNotaFiscalProdutoByID(ID);
+            NotaFiscalProdutoBLL.Delete(clsNotaFiscalProduto);
+
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('produto excluido com sucesso')", true);
+
+            LoadGrid();
+            LoadGridNotaFiscalProduto();
+            
         }
     }
 }
