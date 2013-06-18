@@ -94,10 +94,12 @@ namespace gerenciadornf.UserControl.NotaFiscal
             if (clsNotaFiscal.IDNotaFiscal == 0)
             {
                 NotaFiscalBLL.insert(clsNotaFiscal);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('nota salva com sucesso')", true);
             }
             else
             {
                 NotaFiscalBLL.Update(clsNotaFiscal);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('nota atualizada com sucesso')", true);
             }
         }
 
@@ -138,7 +140,7 @@ namespace gerenciadornf.UserControl.NotaFiscal
                 clsNotaFiscal.TipoTransporte = "Destinatário";
             }
 
-            clsNotaFiscal.QtdTransporte = Convert.ToInt32(txtQtdTransporte.Text);
+           // clsNotaFiscal.QtdTransporte = Convert.ToInt32(txtQtdTransporte.Text);
             clsNotaFiscal.EspecieTransporte = txtEspecieTransporte.Text;
             clsNotaFiscal.MarcaTransporte = txtMarcaTransporte.Text;
             clsNotaFiscal.NumeroTransporte = Convert.ToInt32(txtNumeroTransporte.Text);
@@ -179,7 +181,7 @@ namespace gerenciadornf.UserControl.NotaFiscal
                 radDestinatario.Checked = true;
             }
 
-            txtQtdTransporte.Text = clsNotaFiscal.QtdTransporte.ToString();
+           // txtQtdTransporte.Text = clsNotaFiscal.QtdTransporte.ToString();
             txtEspecieTransporte.Text = clsNotaFiscal.EspecieTransporte;
             txtMarcaTransporte.Text = clsNotaFiscal.MarcaTransporte;
             txtNumeroTransporte.Text = clsNotaFiscal.NumeroTransporte.ToString();

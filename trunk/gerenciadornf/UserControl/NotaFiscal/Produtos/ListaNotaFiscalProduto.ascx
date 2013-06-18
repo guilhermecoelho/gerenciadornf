@@ -5,25 +5,25 @@ Incluir Produto
     DataKeyNames="idNotaFiscal">
     <Columns>
         <asp:TemplateField HeaderText="Numero">
-            <ItemTemplate>
-                <%# Eval("idNotaFiscal")%>
-            </ItemTemplate>
-        </asp:TemplateField>
-        <asp:TemplateField HeaderText="Emitente">
-            <ItemTemplate>
-                <%# Eval("Idemitente")%>
-            </ItemTemplate>
-        </asp:TemplateField>
-        <asp:TemplateField HeaderText="cliente">
-            <ItemTemplate>
-                <%# Eval("idCliente")%>
-            </ItemTemplate>
-        </asp:TemplateField>
-        <asp:TemplateField HeaderText="Data">
-            <ItemTemplate>
-                <%# Eval("datacadastro")%>
-            </ItemTemplate>
-        </asp:TemplateField>
+                    <ItemTemplate>
+                        <%# Eval("idnotafiscal")%>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Emitente">
+                    <ItemTemplate>
+                        <%# Eval("nomeEmitente")%>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="cliente">
+                    <ItemTemplate>
+                        <%# Eval("nomeCliente")%>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Data">
+                    <ItemTemplate>
+                        <%# Eval("datacadastro")%>
+                    </ItemTemplate>
+                </asp:TemplateField>
         <asp:TemplateField HeaderText="Selecionar" ShowHeader="False">
             <ItemTemplate>
                 <div align="center">

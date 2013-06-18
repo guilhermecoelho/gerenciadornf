@@ -92,7 +92,7 @@ namespace gerenciadornf.UserControl.NotaFiscal.Produtos
         protected void LoadGrid()
         {
             List<NotaFiscalTO> clsNotaFiscal = new List<NotaFiscalTO>();
-            clsNotaFiscal = NotaFiscalBLL.listaNotaFiscalAll();
+            clsNotaFiscal = NotaFiscalBLL.getNotaFiscalALL();
             gvNotaFiscal.DataSource = clsNotaFiscal;
             gvNotaFiscal.DataBind();
         }

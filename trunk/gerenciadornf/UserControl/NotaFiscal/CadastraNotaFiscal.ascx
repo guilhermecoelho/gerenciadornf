@@ -1,5 +1,8 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CadastraNotaFiscal.ascx.cs"
     Inherits="gerenciadornf.UserControl.NotaFiscal.CadastraNotaFiscal" %>
+    <h3>
+        Cadastro
+    </h3>
 <table width="100%">
     <tr>
         <td colspan="2" valign="top">
@@ -30,7 +33,7 @@
             Data de saída/entrada:
         </td>
         <td>
-            <asp:TextBox ID="txtDataSaidaEntrada" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtDataSaidaEntrada" class="data" runat="server"></asp:TextBox>
         </td>
     </tr>
     <tr>
@@ -60,14 +63,7 @@
             <asp:RadioButton ID="radDestinatario" Text="Destinatário" runat="server" /><br />
         </td>
     </tr>
-    <tr>
-        <td align="right" width="7%">
-            Quantidade:
-        </td>
-        <td>
-            <asp:TextBox ID="txtQtdTransporte" runat="server"></asp:TextBox>
-        </td>
-    </tr>
+   
     <tr>
         <td align="right" width="7%">
             Especie:
