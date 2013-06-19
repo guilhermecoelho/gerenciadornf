@@ -31,15 +31,6 @@ namespace gerenciadornf.UserControl.Produto {
         protected global::System.Web.UI.WebControls.View vwListaProduto;
         
         /// <summary>
-        /// gvwProduto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwProduto;
-        
-        /// <summary>
         /// btnMostrarTudo control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace gerenciadornf.UserControl.Produto {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNovo;
+        
+        /// <summary>
+        /// gvwProduto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwProduto;
         
         /// <summary>
         /// vwCadastraProduto control.

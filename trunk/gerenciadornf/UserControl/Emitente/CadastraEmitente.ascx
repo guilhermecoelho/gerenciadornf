@@ -28,7 +28,7 @@
             Cep:
         </td>
         <td>
-            <asp:TextBox ID="txtCep" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="txtCep" class="cep" runat="server"></asp:TextBox><br />
         </td>
     </tr>
     <tr>
@@ -60,7 +60,7 @@
             Uf:
         </td>
         <td>
-            <asp:TextBox ID="txtUf" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="txtUf" class="UF" runat="server"></asp:TextBox><br />
         </td>
     </tr>
     <tr>
@@ -76,7 +76,7 @@
             Telefone:
         </td>
         <td>
-            <asp:TextBox ID="txtTelefone" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="txtTelefone" class="telefone" runat="server"></asp:TextBox><br />
         </td>
     </tr>
     <tr>
@@ -84,7 +84,7 @@
             Cnpj:
         </td>
         <td>
-            <asp:TextBox ID="txtCnpj" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="txtCnpj" class="cnpj" runat="server"></asp:TextBox><br />
         </td>
     </tr>
     <tr>
@@ -92,7 +92,7 @@
             Inscrição Estadual:
         </td>
         <td>
-            <asp:TextBox ID="txtInscricaoEstadual" runat="server"></asp:TextBox><br />
+            <asp:TextBox ID="txtInscricaoEstadual" class="inscricaoEstadual" runat="server"></asp:TextBox><br />
         </td>
     </tr>
     <tr>

@@ -31,22 +31,22 @@ namespace gerenciadornf.UserControl.Produto {
         protected global::System.Web.UI.WebControls.TextBox txtNCM;
         
         /// <summary>
-        /// ddlCFOP control.
+        /// txtCFOP control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCFOP;
+        protected global::System.Web.UI.WebControls.TextBox txtCFOP;
         
         /// <summary>
-        /// ddlUnidadeComercializada control.
+        /// txtUnidadeComercializada control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUnidadeComercializada;
+        protected global::System.Web.UI.WebControls.TextBox txtUnidadeComercializada;
         
         /// <summary>
         /// txtValorUnitario control.
@@ -58,12 +58,12 @@ namespace gerenciadornf.UserControl.Produto {
         protected global::System.Web.UI.WebControls.TextBox txtValorUnitario;
         
         /// <summary>
-        /// ddlUnidadeTributaria control.
+        /// txtUnidadeTributaria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUnidadeTributaria;
+        protected global::System.Web.UI.WebControls.TextBox txtUnidadeTributaria;
     }
 }

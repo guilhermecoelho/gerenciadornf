@@ -1,8 +1,14 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListaEmitente.ascx.cs"
     Inherits="gerenciadornf.UserControl.Emitente.ListaEmitente" %>
 <%@ Register Src="CadastraEmitente.ascx" TagName="CadastraEmitente" TagPrefix="uc1" %>
+<h2>
+    Emitente</h2>
 <asp:MultiView ID="mvwEmitente" runat="server" ActiveViewIndex="0">
     <asp:View ID="vwListaEmitente" runat="server">
+        <p>
+            <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
+            <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
+        </p>
         <asp:GridView ID="gvwEmitente" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvwEmitente_RowDeleting"
             OnRowEditing="gvwEmitente_RowEditing" DataKeyNames="IDEmitente">
             <Columns>
@@ -40,11 +46,9 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
-        <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
     </asp:View>
     <asp:View ID="vwCadastraEmitente" runat="server">
         <uc1:CadastraEmitente ID="CadastraEmitente1" runat="server" />
-        <asp:Button ID="btnSalvar" runat="server" Text="Button" OnClick="btnSalvar_Click" />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
     </asp:View>
 </asp:MultiView>

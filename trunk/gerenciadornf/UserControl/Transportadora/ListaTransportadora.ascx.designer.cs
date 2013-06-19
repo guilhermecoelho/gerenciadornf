@@ -31,15 +31,6 @@ namespace gerenciadornf.UserControl.Transportadora {
         protected global::System.Web.UI.WebControls.View vwListaTransportadora;
         
         /// <summary>
-        /// gvwTransportadora control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwTransportadora;
-        
-        /// <summary>
         /// btnMostrarTudo control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace gerenciadornf.UserControl.Transportadora {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNovo;
+        
+        /// <summary>
+        /// gvwTransportadora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwTransportadora;
         
         /// <summary>
         /// vwCadastraTransportadora control.

@@ -38,10 +38,12 @@ namespace gerenciadornf.UserControl.Emitente
             if (clsEmitente.IDEmitente == 0)
             {
                 EmitenteBLL.insert(clsEmitente);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Emitente salvo com sucesso')", true);
             }
             else
             {
                 EmitenteBLL.Update(clsEmitente);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Emitente salvo com sucesso')", true);
             }
 
 

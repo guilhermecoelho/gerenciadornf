@@ -31,15 +31,6 @@ namespace gerenciadornf.UserControl.Emitente {
         protected global::System.Web.UI.WebControls.View vwListaEmitente;
         
         /// <summary>
-        /// gvwEmitente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwEmitente;
-        
-        /// <summary>
         /// btnMostrarTudo control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace gerenciadornf.UserControl.Emitente {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNovo;
+        
+        /// <summary>
+        /// gvwEmitente control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwEmitente;
         
         /// <summary>
         /// vwCadastraEmitente control.

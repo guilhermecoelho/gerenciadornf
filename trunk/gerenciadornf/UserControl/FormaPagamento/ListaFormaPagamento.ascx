@@ -1,8 +1,14 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListaFormaPagamento.ascx.cs"
     Inherits="gerenciadornf.UserControl.FormaPagamento.ListaFormaPagamento" %>
 <%@ Register Src="CadastraFormaPagamento.ascx" TagName="CadastraFormaPagamento" TagPrefix="uc1" %>
+<h2>Formas de Pagamento</h2>
 <asp:MultiView ID="mvwFormaPagamento" runat="server" ActiveViewIndex="0">
+
     <asp:View ID="vwListaFormaPagamento" runat="server">
+        <p>
+            <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
+            <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
+        </p>
         <asp:GridView ID="gvwFormaPagamento" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvwFormaPagamento_RowDeleting"
             OnRowEditing="gvwFormaPagamento_RowEditing" DataKeyNames="IDFormaPagamento">
             <Columns>
@@ -34,14 +40,12 @@
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="Excluir">
                     <ItemTemplate>
-                        <asp:ImageButton ID="ImageButton1" runat="server" ToolTip="Incluir" CausesValidation="False"
+                        <asp:ImageButton ID="ImageButton2" runat="server" ToolTip="Incluir" CausesValidation="False"
                             CommandName="Delete" ImageUrl="~/Util/Imagens/Icones/excluir.png" />
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
-        <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
     </asp:View>
     <asp:View ID="vwCadastraFormaPagamento" runat="server">
         <uc1:CadastraFormaPagamento ID="CadastraFormaPagamento1" runat="server" />

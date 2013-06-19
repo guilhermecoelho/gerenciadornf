@@ -32,10 +32,7 @@ namespace gerenciadornf.UserControl.Produto
         #endregion
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddlCFOP.Items.Insert(0, new ListItem("TesteCFOP", "TesteCFOP"));
-            ddlCFOP.Items.Insert(1, new ListItem("TesteCFOP2", "TesteCFOP2"));
-            ddlUnidadeComercializada.Items.Insert(0, new ListItem("TesteUC", "TesteUC"));
-            ddlUnidadeTributaria.Items.Insert(0, new ListItem("TesteUT", "TesteUT"));
+
 
         }
         public void Salvar()
@@ -44,10 +41,12 @@ namespace gerenciadornf.UserControl.Produto
             if (clsProduto.IDProduto == 0)
             {
                 ProdutoBLL.insert(clsProduto);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Produto salvo com sucesso')", true);
             }
             else
             {
                 ProdutoBLL.Update(clsProduto);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Produto editado com sucesso')", true);
             }
 
 
@@ -58,10 +57,10 @@ namespace gerenciadornf.UserControl.Produto
             clsProduto = this.Produto;
             clsProduto.Descricao = txtDescricao.Text;
             clsProduto.NCM = txtNCM.Text;
-            clsProduto.CFOP = ddlCFOP.SelectedValue;
-            clsProduto.UnidadeComercializada = ddlUnidadeComercializada.SelectedValue;
+            clsProduto.CFOP = txtCFOP.Text;
+            clsProduto.UnidadeComercializada = txtUnidadeComercializada.Text;
             clsProduto.ValorUnitario = Convert.ToDouble(txtValorUnitario.Text);
-            clsProduto.UnidadeTributaria = ddlUnidadeTributaria.SelectedValue;
+            clsProduto.UnidadeTributaria = txtUnidadeTributaria.Text;
 
             
         }
@@ -72,10 +71,10 @@ namespace gerenciadornf.UserControl.Produto
             clsProduto = this.Produto;
             txtDescricao.Text = clsProduto.Descricao;
             txtNCM.Text = clsProduto.NCM;
-            ddlCFOP.SelectedValue = clsProduto.CFOP;
-            ddlUnidadeComercializada.SelectedValue = clsProduto.UnidadeComercializada;
+            txtCFOP.Text = clsProduto.CFOP;
+            txtUnidadeComercializada.Text = clsProduto.UnidadeComercializada;
             txtValorUnitario.Text = clsProduto.ValorUnitario.ToString();
-            ddlUnidadeTributaria.SelectedValue = clsProduto.UnidadeTributaria;
+            txtUnidadeTributaria.Text = clsProduto.UnidadeTributaria;
         }
     }
 }

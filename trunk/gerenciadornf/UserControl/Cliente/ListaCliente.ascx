@@ -3,9 +3,9 @@
 <%@ Register Src="CadastraCliente.ascx" TagName="CadastraCliente" TagPrefix="uc1" %>
 <asp:MultiView ID="mvwCliente" runat="server" ActiveViewIndex="0">
     <asp:View ID="vwListaCliente" runat="server">
-        <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
+        <p><asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
         <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
-        <br />
+        </p>
         <asp:GridView ID="gvwCliente" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvwCliente_RowDeleting"
             OnRowEditing="gvwCliente_RowEditing" DataKeyNames="IDCliente">
             <Columns>
