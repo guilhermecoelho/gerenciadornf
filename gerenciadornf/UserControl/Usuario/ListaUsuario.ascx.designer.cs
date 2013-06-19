@@ -31,15 +31,6 @@ namespace gerenciadornf.UserControl.Usuario {
         protected global::System.Web.UI.WebControls.View vwListaUsuario;
         
         /// <summary>
-        /// gvwUsuario control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwUsuario;
-        
-        /// <summary>
         /// btnMostrarTudo control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace gerenciadornf.UserControl.Usuario {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNovo;
+        
+        /// <summary>
+        /// gvwUsuario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwUsuario;
         
         /// <summary>
         /// vwCadastraUsuario control.

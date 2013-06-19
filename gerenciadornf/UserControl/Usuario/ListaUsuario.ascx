@@ -1,8 +1,16 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListaUsuario.ascx.cs"
     Inherits="gerenciadornf.UserControl.Usuario.ListaUsuario" %>
 <%@ Register Src="CadastraUsuario.ascx" TagName="CadastraUsuario" TagPrefix="uc1" %>
+<h2>
+    Usuários
+</h2>
 <asp:MultiView ID="mvwUsuario" runat="server" ActiveViewIndex="0">
+
     <asp:View ID="vwListaUsuario" runat="server">
+        <p>
+            <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
+            <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
+        </p>
         <asp:GridView ID="gvwUsuario" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvwUsuario_RowDeleting"
             OnRowEditing="gvwUsuario_RowEditing" DataKeyNames="ID">
             <Columns>
@@ -39,11 +47,10 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
-        <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
     </asp:View>
     <asp:View ID="vwCadastraUsuario" runat="server">
         <uc1:CadastraUsuario ID="CadastraUsuario1" runat="server" />
-        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" ValidationGroup="Cadastro"/>
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click"
+            ValidationGroup="Cadastro" />
     </asp:View>
 </asp:MultiView>

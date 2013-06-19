@@ -44,10 +44,12 @@ namespace gerenciadornf.UserControl.Transportadora
             if (clsTransportadora.IDTransportadora == 0)
             {
                 TransportadoraBLL.insert(clsTransportadora);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Transportadora salva com sucesso')", true);
             }
             else
             {
                 TransportadoraBLL.Update(clsTransportadora);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Transportadora editada com sucesso')", true);
             }
 
 

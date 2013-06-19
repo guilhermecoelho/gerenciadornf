@@ -36,6 +36,7 @@ namespace gerenciadornf.UserControl.Produto
             Int32 ID = (Int32)gvwProduto.DataKeys[e.RowIndex].Value;
             clsProduto = ProdutoBLL.GetProdutoByID(ID);
             ProdutoBLL.Delete(clsProduto);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Produto excluido com sucesso')", true);
             LoadGrid();
 
 

@@ -14,7 +14,7 @@ namespace gerenciadornf.UserControl.Transportadora
         {
             if (!IsPostBack)
             {
-                LoadGrid();
+               
             }
         }
         protected void btnMostrarTudo_Click(object sender, EventArgs e)
@@ -40,6 +40,7 @@ namespace gerenciadornf.UserControl.Transportadora
             Int32 ID = (Int32)gvwTransportadora.DataKeys[e.RowIndex].Value;
             clsTransportadora = TransportadoraBLL.GetTransportadoraByID(ID);
             TransportadoraBLL.Delete(clsTransportadora);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Transportadora excluida com sucesso')", true);
             LoadGrid();
 
 

@@ -37,10 +37,12 @@ namespace gerenciadornf.UserControl.FormaPagamento
             if (clsFormaPagamento.IDFormaPagamento == 0)
             {
                 FormaPagamentoBLL.insert(clsFormaPagamento);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Forma de pagamento salva com sucesso')", true);
             }
             else
             {
                 FormaPagamentoBLL.Update(clsFormaPagamento);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Forma de pagamento salva com sucesso')", true);
             }
         }
 

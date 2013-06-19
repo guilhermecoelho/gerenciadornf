@@ -37,6 +37,7 @@ namespace gerenciadornf.UserControl.FormaPagamento
             Int32 ID = (Int32)gvwFormaPagamento.DataKeys[e.RowIndex].Value;
             clsFormaPagamento = FormaPagamentoBLL.GetFormaPagamentoByID(ID);
             FormaPagamentoBLL.Delete(clsFormaPagamento);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Forma de pagamento excluida com sucesso')", true);
             LoadGrid();
 
 

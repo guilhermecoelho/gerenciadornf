@@ -39,6 +39,7 @@ namespace gerenciadornf.UserControl.Usuario
             Int32 ID = (Int32)gvwUsuario.DataKeys[e.RowIndex].Value;
             clsUsuario = UsuarioBLL.GetUsuarioByID(ID);
             UsuarioBLL.Delete(clsUsuario);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Usuário excluido com sucesso')", true);
             LoadGrid();
 
 
