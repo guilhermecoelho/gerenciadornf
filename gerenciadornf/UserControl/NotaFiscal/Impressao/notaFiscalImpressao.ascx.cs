@@ -94,10 +94,10 @@ namespace gerenciadornf.UserControl.NotaFiscal.Impressao
             }
             //dblTotalFinal = dblTotalImpostos + dblTotalSemImpostos;
 
-            lblBaseCalculoICMS.Text = dblTotalSemImpostos.ToString();
-            lblTotalICMS.Text = dblTotalICMS.ToString();
-            lblValorTotalIPI.Text = dblTotalIPI.ToString();
-            lblValorTotalProduto.Text = dblTotalFinal.ToString();
+            lblBaseCalculoICMS.Text = "R$ " + dblTotalSemImpostos.ToString();
+            lblTotalICMS.Text = dblTotalICMS.ToString()+" %";
+            lblValorTotalIPI.Text = dblTotalIPI.ToString() + " %";
+            lblValorTotalProduto.Text = "R$ "+dblTotalSemImpostos.ToString();
 
             gvNotaFiscalProduto.DataSource = this.clsNotaFiscalProduto;
             gvNotaFiscalProduto.DataBind();
