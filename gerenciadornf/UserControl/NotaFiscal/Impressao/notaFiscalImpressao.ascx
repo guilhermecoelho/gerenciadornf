@@ -82,16 +82,16 @@
                         <tbody>
                             <tr>
                                 <td align="left" width="10%">
-                                    Logradura<br />
+                                    Endereço<br />
                                     <asp:Literal ID="lblLograduraEmitente" runat="server"></asp:Literal><br />
                                 </td>
                                 <td align="left" width="10%">
                                     Número<br />
-                                    Número
+                                    <asp:Literal ID="lblNumeroEmitente" runat="server"></asp:Literal><br />
                                 </td>
                                 <td align="left" width="10%">
                                     Complemento<br />
-                                    <asp:Literal ID="lblNumeroEmitente" runat="server"></asp:Literal><br />
+                                    <asp:Literal ID="lblComplementoEmitente" runat="server"></asp:Literal><br />
                                 </td>
                                 <td align="left" width="10%">
                                     Bairro<br />
@@ -157,7 +157,7 @@
                         <tbody>
                             <tr>
                                 <td align="left" width="10%">
-                                    Logradura<br />
+                                    Endereço<br />
                                     <asp:Literal ID="lblLograduraCliente" runat="server"></asp:Literal><br />
                                 </td>
                                 <td align="left" width="10%">
