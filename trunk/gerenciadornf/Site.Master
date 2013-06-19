@@ -15,6 +15,10 @@
                 $(".cep").mask("9999-999");
                 $(".data").mask("99/99/9999");
                 $(".UF").mask("AA");
+                $(".cpf").mask("999.999.999-9");
+                $(".cnpj").mask("99.999.999/9999-99");
+                $(".InscricaoEstadual").mask("999.999.999.9999");
+                $(".InscricaoMunicipal").mask("9 999 00999999-9");
 
             });
     </script>

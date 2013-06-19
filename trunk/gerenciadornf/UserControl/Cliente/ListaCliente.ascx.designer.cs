@@ -31,15 +31,6 @@ namespace gerenciadornf.UserControl.Cliente {
         protected global::System.Web.UI.WebControls.View vwListaCliente;
         
         /// <summary>
-        /// gvwCliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwCliente;
-        
-        /// <summary>
         /// btnMostrarTudo control.
         /// </summary>
         /// <remarks>
@@ -56,6 +47,15 @@ namespace gerenciadornf.UserControl.Cliente {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNovo;
+        
+        /// <summary>
+        /// gvwCliente control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvwCliente;
         
         /// <summary>
         /// vwCadastraCliente control.

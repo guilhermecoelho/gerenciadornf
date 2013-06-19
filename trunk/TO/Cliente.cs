@@ -12,7 +12,7 @@ namespace Cliente
         public int IDCliente{get; set;}
         public String Nome{get; set;}
         public String Email{get; set;}
-        public int Tipo{get; set;}
+        public String Tipo{get; set;}
         public String NomeFantasia{get; set;}
         public String Cep{get; set;}
         public String Logradura{get; set;}

@@ -5,6 +5,7 @@
     TagPrefix="uc1" %>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-
+    <h2>Clientes</h2>
+    <br />
     <uc1:ListaCliente ID="ListaCliente1" runat="server" />
 </asp:Content>

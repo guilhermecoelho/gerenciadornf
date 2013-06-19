@@ -14,7 +14,7 @@ namespace gerenciadornf.UserControl.Cliente
         {
             if (!IsPostBack)
             {
-                LoadGrid();
+               
             }
         }
         protected void btnMostrarTudo_Click(object sender, EventArgs e)

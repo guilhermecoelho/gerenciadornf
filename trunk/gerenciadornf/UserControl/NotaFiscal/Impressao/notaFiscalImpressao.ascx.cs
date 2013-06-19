@@ -82,16 +82,21 @@ namespace gerenciadornf.UserControl.NotaFiscal.Impressao
             Double dblTotalSemImpostos = 0;
             Double dblTotalFinal = 0;
             double dblTotalImpostos = 0;
+            Double dblTotalICMS = 0;
+            Double dblTotalIPI = 0;
             foreach (NotaFiscalProdutoTO _clsNotaFiscalProduto in clsNotaFiscalProduto)
             {
-                dblTotalSemImpostos += (_clsNotaFiscalProduto.ValorUnitario * _clsNotaFiscalProduto.QtdProduto);
-                dblTotalImpostos += _clsNotaFiscalProduto.ValorTotal;
+                  dblTotalSemImpostos += (_clsNotaFiscalProduto.ValorUnitario * _clsNotaFiscalProduto.QtdProduto);
+                //dblTotalImpostos += _clsNotaFiscalProduto.ValorTotal;
+                  dblTotalICMS += (dblTotalSemImpostos * _clsNotaFiscalProduto.Icms)/100;
+                  dblTotalIPI += (dblTotalSemImpostos * _clsNotaFiscalProduto.Icms)/100;
+                  dblTotalFinal += _clsNotaFiscalProduto.ValorTotal;
             }
-            dblTotalFinal = dblTotalImpostos + dblTotalSemImpostos;
+            //dblTotalFinal = dblTotalImpostos + dblTotalSemImpostos;
 
             lblBaseCalculoICMS.Text = dblTotalSemImpostos.ToString();
-            lblTotalICMS.Text = dblTotalImpostos.ToString();
-           // lblValorTotalIPI.Text = "0";
+            lblTotalICMS.Text = dblTotalICMS.ToString();
+            lblValorTotalIPI.Text = dblTotalIPI.ToString();
             lblValorTotalProduto.Text = dblTotalFinal.ToString();
 
             gvNotaFiscalProduto.DataSource = this.clsNotaFiscalProduto;

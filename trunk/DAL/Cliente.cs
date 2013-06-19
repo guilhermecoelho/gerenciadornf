@@ -39,7 +39,7 @@ namespace Cliente
                     clsCliente.IDCliente = Convert.ToInt32(adap["IDCliente"]);
                     clsCliente.Nome = adap["nome"].ToString();
                     clsCliente.Email = adap["email"].ToString();
-                    clsCliente.Tipo = Convert.ToInt32(adap["tipo"]);
+                    clsCliente.Tipo = adap["tipo"].ToString();
                     clsCliente.NomeFantasia = adap["NomeFantasia"].ToString();
                     clsCliente.Cep = adap["Cep"].ToString();
                     clsCliente.Logradura = adap["Logradura"].ToString();
@@ -96,7 +96,7 @@ namespace Cliente
                     clsCliente.IDCliente = Convert.ToInt32(adap["IDCliente"]);
                     clsCliente.Nome = adap["nome"].ToString();
                     clsCliente.Email = adap["email"].ToString();
-                    clsCliente.Tipo = Convert.ToInt32(adap["tipo"]);
+                    clsCliente.Tipo = adap["tipo"].ToString();
                     clsCliente.NomeFantasia = adap["NomeFantasia"].ToString();
                     clsCliente.Cep = adap["Cep"].ToString();
                     clsCliente.Logradura = adap["Logradura"].ToString();
