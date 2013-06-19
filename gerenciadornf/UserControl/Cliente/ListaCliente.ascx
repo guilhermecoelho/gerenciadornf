@@ -1,9 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ListaCliente.ascx.cs"
     Inherits="gerenciadornf.UserControl.Cliente.ListaCliente" %>
 <%@ Register Src="CadastraCliente.ascx" TagName="CadastraCliente" TagPrefix="uc1" %>
-
 <asp:MultiView ID="mvwCliente" runat="server" ActiveViewIndex="0">
     <asp:View ID="vwListaCliente" runat="server">
+        <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
+        <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
+        <br />
         <asp:GridView ID="gvwCliente" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvwCliente_RowDeleting"
             OnRowEditing="gvwCliente_RowEditing" DataKeyNames="IDCliente">
             <Columns>
@@ -27,7 +29,6 @@
                         <%# Eval("TIPO")%>
                     </ItemTemplate>
                 </asp:TemplateField>
-                
                 <asp:TemplateField HeaderText="Editar">
                     <ItemTemplate>
                         <div align="center">
@@ -46,11 +47,9 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <asp:Button ID="btnMostrarTudo" runat="server" Text="Mostrar Tudo" OnClick="btnMostrarTudo_Click" />
-        <asp:Button ID="btnNovo" runat="server" Text="Novo" OnClick="btnNovo_Click" />
     </asp:View>
     <asp:View ID="vwCadastraCliente" runat="server">
         <uc1:CadastraCliente ID="CadastraCliente1" runat="server" />
-        <asp:Button ID="btnSalvar" runat="server" Text="Button" OnClick="btnSalvar_Click" />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" ValidationGroup="Cadastro" />
     </asp:View>
 </asp:MultiView>

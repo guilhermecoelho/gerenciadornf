@@ -44,10 +44,12 @@ namespace gerenciadornf.UserControl.Cliente
             if (clsCliente.IDCliente == 0)
             {
                 ClienteBLL.insert(clsCliente);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Cliente salvo com sucesso')", true);
             }
             else
             {
                 ClienteBLL.Update(clsCliente);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "sucesso", "alert('Cliente editado com sucesso')", true);
             }
 
 
@@ -58,7 +60,7 @@ namespace gerenciadornf.UserControl.Cliente
             clsCliente = this.Cliente;
             clsCliente.Nome = txtNome.Text;
             clsCliente.Email = txtEmail.Text;
-            clsCliente.Tipo = Convert.ToInt32(txtTipo.Text);
+            clsCliente.Tipo = txtTipo.Text;
             clsCliente.NomeFantasia = txtNomeFantasia.Text;
             clsCliente.Cep = txtCep.Text;
             clsCliente.Logradura = txtLogradura.Text;
