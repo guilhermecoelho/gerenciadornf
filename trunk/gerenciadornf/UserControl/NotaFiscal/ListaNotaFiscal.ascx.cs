@@ -120,5 +120,20 @@ namespace gerenciadornf.UserControl.NotaFiscal
         {
             mvwNotaFiscal.ActiveViewIndex = 3;
         }
+
+        protected void btnVoltarCadastro_Click(object sender, EventArgs e)
+        {
+            mvwNotaFiscal.ActiveViewIndex = 0;
+        }
+
+        protected void btnVoltarImpressao_Click(object sender, EventArgs e)
+        {
+            mvwNotaFiscal.ActiveViewIndex = 0;
+        }
+
+        protected void btnVoltarNotaFiscalProduto_Click(object sender, EventArgs e)
+        {
+            mvwNotaFiscal.ActiveViewIndex = 0;
+        }
     }
 }

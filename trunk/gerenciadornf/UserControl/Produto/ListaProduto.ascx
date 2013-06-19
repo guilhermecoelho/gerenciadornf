@@ -38,7 +38,7 @@
 
     <asp:View ID="vwCadastraProduto" runat="server">
 
-        <uc1:CadastraProduto ID="CadastraProduto1" runat="server" />
-        <asp:Button ID="btnSalvar" runat="server" Text="Button" OnClick="btnSalvar_Click" />
+        <uc1:CadastraProduto ID="CadastraProduto1" runat="server" /><br />
+        <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
     </asp:View>
 </asp:MultiView>

@@ -104,14 +104,16 @@
     <asp:View ID="vwCadastraNotaFiscal" runat="server">
         <uc1:CadastraNotaFiscal ID="CadastraNotaFiscal1" runat="server" />
         <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click" />
-        <asp:Button ID="btnVoltarCadastro" runat="server" Text="Voltar" />
+        <asp:Button ID="btnVoltarCadastro" runat="server" Text="Voltar" OnClick="btnVoltarCadastro_Click" />
     </asp:View>
     <asp:View ID="vwExibeNF" runat="server">
         <uc2:notaFiscalImpressao ID="notaFiscalImpressao1" runat="server" />
-        <asp:Button ID="btnVoltarImpressao" runat="server" Text="Voltar" />
-        <asp:Button ID="btnImprimir" runat="server" Text="Imprimir" />
+        <asp:Button ID="btnVoltarImpressao" runat="server" Text="Voltar" OnClick="btnVoltarImpressao_Click" />
     </asp:View>
     <asp:View ID="vwListaProdutos" runat="server">
         <uc3:ListaNotaFiscalProduto ID="ListaNotaFiscalProduto1" runat="server" />
+        <asp:Button ID="btnVoltarNotaFiscalProduto" runat="server" Text="Voltar" OnClick="btnVoltarNotaFiscalProduto_Click" />
     </asp:View>
 </asp:MultiView>
+<p>
+</p>
